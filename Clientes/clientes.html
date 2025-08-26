@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EasyStock | Cliente</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Lora&family=Montserrat&family=Noto+Sans&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../Styles/clientes.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="sidebar">
+    <div class="menu-icon">&#9776;</div>
+    <div class="user-info">Felipe Casanova</div>
+    <div class="menu">
+      <span><a href="./index.html"><i class="fas fa-sync-alt"></i> Actualizar datos</a></span>
+      <span><a href="./index.html" class="menu-itemcom"><i class="fas fa-user-cog"></i> Mantención de usuarios</a></span>
+      <span><a href="./index.html" class="menu-itemlog"><i class="fas fa-cogs"></i> Configuración</a></span>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <a href="./index.html">
+      <img class="contenedor-m" src="../image/icono.png" alt="Logo">
+    </a>
+
+    <h1>Ferretería El Grillo</h1>
+    <h4>Administrador</h4>
+
+    <div class="registro">
+      <h3><i class="fas fa-user-plus"></i> Registro de Cliente</h3>
+    </div>
+
+    <form action="#" method="POST" class="formulario-cliente" onsubmit="mostrarAlerta(); return false;">
+      
+      <fieldset>
+        <legend><i class="fas fa-user-tag"></i> Tipo de Cliente</legend>
+        <div class="grupo-radio">
+          <label><input type="radio" name="tipo_cliente" value="Persona Natural"> Persona Natural</label>
+          <label><input type="radio" name="tipo_cliente" value="Persona Jurídica"> Persona Jurídica</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend><i class="fas fa-user"></i> Datos de Persona Natural</legend>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre"><i class="fas fa-user"></i> Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre">
+          </div>
+          <div class="form-group">
+            <label for="cedula"><i class="fas fa-id-card"></i> Cédula:</label>
+            <input type="text" id="cedula" name="cedula">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="celular"><i class="fas fa-phone"></i> Celular:</label>
+            <input type="tel" id="celular" name="celular">
+          </div>
+          <div class="form-group">
+            <label for="email"><i class="fas fa-envelope"></i> Correo electrónico:</label>
+            <input type="email" id="email" name="email">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="direccion"><i class="fas fa-map-marker-alt"></i> Dirección:</label>
+            <input type="text" id="direccion" name="direccion">
+          </div>
+          <div class="form-group">
+            <label for="ciudad"><i class="fas fa-city"></i> Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad">
+          </div>
+        </div>
+      </fieldset>
+
+       <fieldset>
+        <legend><i class="fas fa-building"></i> Datos de Persona Jurídica</legend>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="razon_social"><i class="fas fa-building"></i> Razón social:</label>
+            <input type="text" id="razon_social" name="razon_social">
+          </div>
+          <div class="form-group">
+            <label for="nit"><i class="fas fa-id-badge"></i> NIT:</label>
+            <input type="text" id="nit" name="nit">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="representante"><i class="fas fa-user-tie"></i> Representante legal:</label>
+            <input type="text" id="representante" name="representante">
+          </div>
+          <div class="form-group">
+            <label for="celular_juridico"><i class="fas fa-phone"></i> Celular:</label>
+            <input type="tel" id="celular_juridico" name="celular_juridico">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email_juridico"><i class="fas fa-envelope"></i> Correo electrónico:</label>
+            <input type="email" id="email_juridico" name="email_juridico">
+          </div>
+          <div class="form-group">
+            <label for="direccion_juridico"><i class="fas fa-map-marker-alt"></i> Dirección:</label>
+            <input type="text" id="direccion_juridico" name="direccion_juridico">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="ciudad_juridico"><i class="fas fa-city"></i> Ciudad:</label>
+            <input type="text" id="ciudad_juridico" name="ciudad_juridico">
+          </div>
+        </div>
+      </fieldset>
+
+      
+      <div class="form-buttons">
+        <button type="submit" class="btn-guardar">
+          <i class="fas fa-save"></i> Guardar
+        </button>
+        <button type="reset" class="btn-cancelar">
+          <i class="fas fa-times"></i> Cancelar
+        </button>
+      </div>
+
+    </form>
+  </div>
+</body>
+</html>

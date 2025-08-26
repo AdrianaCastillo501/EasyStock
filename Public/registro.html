@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyStock | Registro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Styles/registro.css">
+</head>
+<body>
+    <a href="../Public/login.html">
+         <img class="contenedor-m" src="./../image/icono.png" alt="Logo">
+    </a>
+
+    <div class="login-container">
+        <div class="login-card">
+ <h1 class="registro_name">Registro de Usuario</h1>
+        <form action="./login.html" method="post" class="formulario" novalidate>
+            
+           <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" placeholder="Tu nombre" name="nombre" required>
+
+            <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" placeholder="Tu apellido" name="apellido" required>
+            
+            <label for="identificacion">No. Identificacion</label>
+                <input type="text" id="identificacion" placeholder="No. identificacion" name="identificacion" required>
+
+            <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" placeholder="Tu Email" name="email" required>
+
+            <label for="fecha">Fecha de Nacimiento</label>
+                <input type="date" id="fecha"  name="fecha" required>
+            
+            <label for="cargo">Cargo</label>
+                <input type="text" id="cargo"  placeholder="Cargo de la empresa" name="Cargo" required>
+           
+            <label for="Contraseña">Contraseña</label>
+                <input type="password" id="password" placeholder="Contraseña" name="password" required>
+
+                
+            <input type="submit" class="boton"  value="Crear Cuenta">
+        </form>
+     
+        <div class="register-text">¿Ya tienes una cuenta?
+            <a href="./login.html"> Iniciar Sesión</a>
+        </div>
+        
+    </div>
+    
+    </body>
+
+</html>

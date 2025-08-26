@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EasyStock | Proveedor</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Lora&family=Montserrat&family=Noto+Sans&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../Styles/proveedor.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="sidebar">
+    <div class="menu-icon">&#9776;</div>
+    <div class="user-info">Felipe Casanova</div>
+    <div class="menu">
+      <span><a href="./index.html"><i class="fas fa-sync-alt"></i> Actualizar datos</a></span>
+      <span><a href="./index.html" class="menu-itemcom"><i class="fas fa-user-cog"></i> Mantención de usuarios</a></span>
+      <span><a href="./index.html" class="menu-itemlog"><i class="fas fa-cogs"></i> Configuración</a></span>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <a href="./index.html">
+      <img class="contenedor-m" src="../image/icono.png" alt="Logo">
+    </a>
+
+    <h1>Ferretería El Grillo</h1>
+    <h4>Administrador</h4>
+
+    <div class="registro">
+      <h3><i class="fas fa-file-invoice"></i> Registro de Proveedor</h3>
+    </div>
+
+    <form action="#" method="post">
+      <fieldset class="grupo-campo">
+        <legend><i class="fas fa-user"></i> Datos del Proveedor</legend>
+
+        <div class="form-container">
+          <div class="form-grupo corto">
+            <label for="id_proveedor"><i class="fas fa-id-badge"></i> ID Proveedor:</label>
+            <input type="text" id="id_proveedor" name="id_proveedor">
+          </div>
+          <div class="form-grupo corto">
+            <label for="fecha"><i class="fas fa-calendar-alt"></i> Fecha:</label>
+            <input type="date" id="fecha" name="fecha">
+          </div>
+        </div>
+
+        <div class="form-container">
+          <div class="form-grupo">
+            <label for="nombre"><i class="fas fa-user"></i> Nombre del proveedor:</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+
+          <div class="form-grupo">
+            <label for="empresa"><i class="fas fa-building"></i> Empresa:</label>
+            <input type="text" id="empresa" name="empresa" required>
+          </div>
+
+          <div class="form-grupo">
+            <label for="nit"><i class="fas fa-id-card"></i> NIT:</label>
+            <input type="text" id="nit" name="nit" required>
+          </div>
+
+          <div class="form-grupo">
+            <label for="telefono"><i class="fas fa-phone"></i> Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+          </div>
+
+          <div class="form-grupo">
+            <label for="correo"><i class="fas fa-envelope"></i> Correo electrónico:</label>
+            <input type="email" id="correo" name="correo">
+          </div>
+
+          <div class="form-grupo">
+            <label for="direccion"><i class="fas fa-map-marker-alt"></i> Dirección:</label>
+            <input type="text" id="direccion" name="direccion">
+          </div>
+
+          <div class="form-grupo">
+            <label for="ciudad"><i class="fas fa-city"></i> Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad">
+          </div>
+
+          <div class="form-grupo">
+            <label for="tipo_proveedor"><i class="fas fa-list-alt"></i> Tipo de proveedor:</label>
+            <select id="tipo_proveedor" name="tipo_proveedor" required>
+              <option value="">Seleccione una opción</option>
+              <option value="nacional">Nacional</option>
+              <option value="internacional">Internacional</option>
+              <option value="local">Local</option>
+              <option value="mayorista">Mayorista</option>
+              <option value="minorista">Minorista</option>
+            </select>
+          </div>
+
+          <div class="form-grupo">
+            <label for="condicionesPago"><i class="fas fa-file-invoice-dollar"></i> Condiciones de pago:</label>
+            <select id="condicionesPago" name="condicionesPago">
+              <option selected disabled>Seleccione una opción</option>
+              <option value="contado">Contado</option>
+              <option value="credito">Crédito</option>
+              <option value="otros">Otros</option>
+            </select>
+          </div>
+
+          <div class="form-grupo">
+            <label for="diasdepedido"><i class="fas fa-calendar-week"></i> Días de pedido:</label>
+            <select id="diasdepedido" name="diasdepedido">
+              <option selected disabled>Seleccione una opción</option>
+              <option value="lunes_jueves">Lunes y jueves</option>
+              <option value="martes_miercoles">Martes y miércoles</option>
+              <option value="viernes">Viernes</option>
+            </select>
+          </div>
+        </div>
+
+        
+        <div class="form-buttons">
+          <button type="submit" class="btn-guardar"><i class="fas fa-save"></i> Guardar</button>
+          <button type="reset" class="btn-cancelar"><i class="fas fa-times"></i> Cancelar</button>
+        </div>
+
+      </fieldset>
+    </form>
+  </div>
+
+</body>
+</html>
