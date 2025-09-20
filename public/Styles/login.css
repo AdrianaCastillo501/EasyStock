@@ -1,0 +1,135 @@
+html {
+    font-size: 65%;
+    box-sizing: border-box;
+    height: 100%;
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+
+}
+body {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: #001f30;
+    font-size: 1.6rem;
+    min-height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenedor-m {
+width: 25rem;
+}
+img.contenedor-m {
+    position: absolute;
+  top: -5rem;
+  left: 0;
+}
+
+.login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+.Iniciar_name{
+    font-size: 4rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    text-align: center;
+    color: #65dce0
+}
+.comtainer{
+    padding: 40px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.login-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    text-align: center;
+}
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+.password-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.forgot-password {
+    font-size: 12px;
+    color: #37d1d9;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+.recordarme {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 20px;
+}
+
+.recordarme input {
+    margin-top: -2px;
+    margin-right: 10px;
+}
+.boton {
+    width: 100%;
+    padding: 12px;
+    background: #5ce1e6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.boton:hover {
+    background: #49cfd3;
+}
+.register-text {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #555;
+}
+
+.register-text a {
+    color: #37d1d9;
+    text-decoration: none;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
+}
