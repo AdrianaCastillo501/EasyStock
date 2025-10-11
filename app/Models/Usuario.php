@@ -13,10 +13,23 @@ class Usuario extends Model
 
     protected $fillable = [
         'no_identificacion',
-        'contrasena'
+        'contrasena',
+        'nombre',
+        'apellido',
+        'correo',
+        'id_rol',
+        'estado',
     ];
 
     protected $hidden = [
         'contrasena'
     ];
+
+    public function rol()
+{
+    return $this->belongsTo(Rol::class, 'id_rol'); // id_rol es la FK en usuarios
 }
+
+}
+
+

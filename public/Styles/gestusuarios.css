@@ -1,0 +1,391 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* evita scroll horizontal */
+}
+
+
+    body {    
+      font-family: "Roboto", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+      display: flex;
+      height: 100%;
+    }
+    .menu-icon { /*ICONO DEL MENU*/
+      position: absolute;  
+      top: 5px;
+      left: 1rem;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      z-index: 1000;
+    }
+    .sidebar {
+      width: 250px;
+      background-color: #e0f2f1;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid #ccc;
+    }
+    .contenedor-m {  /*LOGO EASYSTOCK*/
+      width: 20rem;
+    
+      }
+      img.contenedor-m { /*LOGO EASYSTOCK*/
+          position: absolute;
+        top: -6rem;
+        right: 0;
+      }
+
+    .user-info {
+      background-color: #26a69a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .menu { /*AJUSTES DEL MENÚ SIDEBAR*/
+      padding: 20px;
+    }
+
+    .menu i {
+  padding: 2.5px;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+    .main-content {
+      flex: 1;
+      background-color: #001f30;
+      color: white;
+      padding: 40px;
+      position: relative;
+      
+
+    }
+
+    .main-content h1 { /*FERRETERIA EL GRILLO*/
+      font-size: 30px;
+      color: #26a69a;
+      margin-bottom: 10px;
+    }
+
+  .main-content h3 { /*GESTION DE USUARIOS TITULO*/
+      color: #a0d8d3;
+      margin-bottom: 40px;
+    }
+    
+
+  .main-content h4 {     /*ADMINISTRADOR*/
+      color: #a0d8d3;
+      margin-bottom: 40px;
+    }
+
+
+
+span{
+      display: block;
+      line-height: 4rem;
+    }
+a {
+  color: #333;
+  text-decoration-line: none;
+
+}
+
+h3 {
+  color: #65dce0;
+  font-size: 2.3rem;
+  text-align: left;
+  margin-top: -2rem;
+}
+
+h4 {
+  color: #65dce0;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.GestionUsuarios{
+  color: #65dce0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  width: 90%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.GestionUsuarios h3 {
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.Usuarios-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.btn-agregar-usuario {
+    font-family: "Roboto", sans-serif;
+    display: block;
+    padding: .7rem;
+    background: #65dce0;
+    color: #000 !important;
+    border: #65dce0;
+    border-radius: 9px;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    
+} 
+
+/* Espacio entre filtros y tabla */
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter {
+  margin-bottom: 20px;
+}
+
+
+/* Tamaño del select de cantidad de registros */
+.dataTables_length select {
+  font-size: 14px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  background-color: #062e34;
+  color: grey;
+  border: 1px solid #0a9396;
+}
+
+/* Etiqueta "Search:" */
+.dataTables_wrapper .dataTables_filter label {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Input de búsqueda */
+.dataTables_wrapper .dataTables_filter input {
+  font-size: 14px;
+  padding: 6px 10px;
+  border: 1px solid #0a9396;
+  border-radius: 6px;
+  background-color: #062e34;
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.dataTables_wrapper .dataTables_filter input:focus {
+  border-color: #65dce0;
+}
+
+
+
+/* ESTILO PARA LA TABLA DE GESTIÓN DE PRODUCTO */
+.tabla-usuarios {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #001f2f;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+/* Aplica borde a TODA la tabla */
+.tabla-usuarios,
+.tabla-usuarios th,
+.tabla-usuarios td {
+  border: 1px solid #007c91;  
+}
+/* Encabezado de tabla */
+.tabla-usuarios thead {
+  background-color: #003a4e;
+}
+
+.tabla-usuarios thead th {
+  padding: 14px 12px;
+  text-align: center;
+  font-weight: 600;
+  color: #65dce0;
+  font-size: 14px;
+  border-bottom: 2px solid #005066;
+}
+
+/* Cuerpo de tabla */
+.tabla-usuarios tbody td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #00394d;
+  font-size: 12px;
+}
+
+/* Zebra alternado */
+.tabla-usuarios tbody tr:nth-child(even) {
+  background-color: #002b3a;
+}
+
+
+/* Centrar botones dentro de la celda de acciones */
+.tabla-usuarios td:last-child {
+  text-align: center;
+  
+}
+
+/* Agrupar y centrar los botones */
+.tabla-usuarios .acciones {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 8px; 
+  
+}
+
+/* Estilos individuales de los botones */
+.tabla-usuarios td button {
+  background-color: #065a60;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover */
+.tabla-usuarios td button:hover {
+  background-color: #0a9396;
+}
+
+/* Contenedor de los botones de paginación */
+.dataTables_wrapper .dataTables_paginate {
+  margin-top: 16px;
+  display: flex !important;
+  justify-content: flex-end; /* O usa center si quieres centrar */
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: visible !important;
+}
+
+/* Botones de paginación comunes (Previous, Next, números) */
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  display: inline-block !important;
+  font-size: 14px !important;
+  padding: 4px 10px !important;
+  margin: 2px;
+  background-color: #094d5b !important;
+  color: #ffffff !important;
+  border-radius: 6px !important;
+  border: none !important;
+  cursor: pointer;
+  box-shadow: none !important;
+  line-height: 1.4 !important;
+  height: auto !important;
+  width: auto !important;
+  text-align: center !important;
+}
+
+/* Botón de página actual (activo) */
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  background-color: #65dce0 !important;
+  color: #000 !important;
+  font-weight: bold !important;
+}
+
+/* Hover selector de pagina */
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  background-color: #0a9396 !important;
+  color: #fff !important;
+}
+
+
+.filtro-usuarios {
+  display: flex;
+  flex-wrap: wrap; /* Permite que se acomoden en varias filas si es necesario */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;
+  gap: 15px; /* espacio entre elementos */
+  margin-top: 30px; /* baja un poco el filtro respecto al título */
+  margin-bottom: 20px; /* espacio debajo del filtro, antes de la tabla */
+}
+
+.filtro-usuarios label {
+  color: #65dce0;
+  font-weight: 500;
+  margin-right: 5px;
+}
+
+.filtro-usuarios select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #065a60; /* borde fino y elegante */
+  background-color: #001f30; /* color de fondo igual a tu main-content */
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+}
+
+.filtro-usuarios select:focus {
+  border-color: #65dce0;
+}
+
+.filtro-usuarios button {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  background-color: #065a60;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filtro-usuarios button:hover {
+  background-color: #0a9396;
+}
+/* --- BOTÓN EDITAR (igual al de eliminar) --- */
+.tabla-usuarios td a.btn-editar {
+  background-color: #065a60;
+  color: white;
+  text-decoration: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.tabla-usuarios td a.btn-editar:hover {
+  background-color: #0a9396;
+}

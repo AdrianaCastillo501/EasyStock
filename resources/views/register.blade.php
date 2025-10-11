@@ -50,8 +50,12 @@
                 <input type="email" id="correo" placeholder="Tu Email" name="correo" value="{{ old('correo') }}" required>
 
                 <label for="cargo">Cargo</label>
-                <input type="text" id="cargo" placeholder="Cargo de la empresa" name="id_rol" value="{{ old('id_rol') }}" required>
-
+                <select id="cargo" name="id_rol" required>
+                    <option value="">-- Selecciona un cargo --</option>
+                    <option value="1" {{ old('id_rol') == 1 ? 'selected' : '' }}>Administrador</option>
+                    <option value="2" {{ old('id_rol') == 2 ? 'selected' : '' }}>Vendedor</option>
+                    <option value="3" {{ old('id_rol') == 3 ? 'selected' : '' }}>Inventarista</option>
+                </select>
                 <label for="password">Contraseña</label>
                 <input type="password" id="password" placeholder="Contraseña" name="contrasena" required>
 

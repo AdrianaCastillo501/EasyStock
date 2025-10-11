@@ -19,41 +19,37 @@ class AuthController extends Controller
     // Procesar login
     public function login(Request $request)
     {
-        // Validación simple
-        $request->validate([
-            'no_identificacion' => 'required',
-            'contrasena' => 'required',
-        ]);
+        //Validación simple
+    $request->validate([
+        'no_identificacion' => 'required',
+        'contrasena' => 'required',
+    ]);
 
-        // Buscar usuario
-        $usuario = Usuario::where('no_identificacion', $request->no_identificacion)
-                          ->where('contrasena', $request->contrasena) // contraseña sin hash
-                          ->first();
+    //Limpiar valores para evitar espacios extras
+    $no_identificacion = trim($request->no_identificacion);
+    $contrasena = trim($request->contrasena);
 
-        if ($usuario) {
-            // Guardar sesión
-            Session::put('usuario', $usuario->no_identificacion);
-            return redirect()->route('dashboard');
-        } else {
-            return back()->withErrors(['error' => 'Credenciales incorrectas'])->withInput();
-        }
+    //Buscar usuario exacto en la base de datos
+    $usuario = Usuario::where('no_identificacion', $no_identificacion)
+                      ->where('contrasena', $contrasena)
+                      ->first();
+
+
+   if (!$usuario) {
+    return redirect()->route('login.form')
+                     ->withErrors(['error' => 'Credenciales incorrectas'])
+                     ->withInput();
+}
+
+    //Guardar ID del usuario en la sesión
+    Session::put('id_usuario', $usuario->id_usuario);
+
+
+    return redirect()->route('dashboard');
     }
 
-    // Dashboard (página de bienvenida)
-    public function dashboard()
-    {
-        if (!Session::has('usuario')) {
-            return redirect()->route('login.form');
-        }
-        return view('dashboard');
-    }
 
-    // Logout
-    public function logout()
-    {
-        Session::forget('usuario');
-        return redirect()->route('login.form');
-    }
+
 
     // Mostrar formulario de registro
     public function showRegisterForm()
@@ -115,6 +111,15 @@ public function sendResetLink(Request $request)
     } else {
         return back()->withErrors(['error' => 'No se encontró un usuario con esos datos'])->withInput();
     }
+}
+// Cerrar sesión
+public function logout()
+{
+    // Eliminar la sesión del usuario
+    Session::forget('id_usuario');
+
+    // Redirigir al login con un mensaje opcional
+    return redirect()->route('login.form')->with('success', 'Has cerrado sesión correctamente');
 }
 
 }

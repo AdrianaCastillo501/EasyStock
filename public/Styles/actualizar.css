@@ -1,0 +1,309 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* evita scroll horizontal */
+}
+
+
+    body {    
+      font-family: "Roboto", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+      display: flex;
+      height: 100%;
+    }
+    .menu-icon { /*ICONO DEL MENU*/
+      position: absolute;  
+      top: 5px;
+      left: 1rem;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      z-index: 1000;
+    }
+    .sidebar {
+      width: 250px;
+      background-color: #e0f2f1;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid #ccc;
+    }
+    .contenedor-m {  /*LOGO EASYSTOCK*/
+      width: 20rem;
+    
+      }
+      img.contenedor-m { /*LOGO EASYSTOCK*/
+          position: absolute;
+        top: -6rem;
+        right: 0;
+      }
+
+    .user-info {
+      background-color: #26a69a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .menu { /*AJUSTES DEL MENÚ SIDEBAR*/
+      padding: 20px;
+    }
+
+    .menu i {
+  padding: 2.5px;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+    .main-content {
+      flex: 1;
+      background-color: #001f30;
+      color: white;
+      padding: 40px;
+      position: relative;
+      
+
+    }
+
+    .main-content h1 { /*FERRETERIA EL GRILLO*/
+      font-size: 30px;
+      color: #26a69a;
+      margin-bottom: 10px;
+    }
+
+  .main-content h3 { /*GESTION DE USUARIOS TITULO*/
+      color: #a0d8d3;
+      margin-bottom: 40px;
+    }
+    
+
+  .main-content h4 {     /*ADMINISTRADOR*/
+      color: #a0d8d3;
+      margin-bottom: 40px;
+    }
+
+    .icon-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        justify-items: center;
+      }
+
+
+
+span{
+      display: block;
+      line-height: 4rem;
+    }
+a {
+  color: #333;
+  text-decoration-line: none;
+
+}
+
+h3 {
+  color: #65dce0;
+  font-size: 2.3rem;
+  text-align: left;
+  margin-top: -2rem;
+}
+
+h4 {
+  color: #65dce0;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.GestionUsuarios{
+  color: #65dce0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  width: 90%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.GestionUsuarios h3 {
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+
+
+form {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+fieldset {
+  border: 1px solid #26a69a;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+legend {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #26a69a;
+  padding: 0 10px;
+  text-align: center;
+}
+
+fieldset label {
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  margin-top: 10px;
+}
+
+fieldset input,
+fieldset select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+  box-sizing: border-box;
+}
+
+fieldset .grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+fieldset .grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.permisos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.permisos label {
+  font-weight: normal;
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form-footer button {
+  background: #26a69a;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.form-footer button:hover {
+  background: #1d7c71;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: center;  /* centra los botones horizontalmente */
+  align-items: center;      /* centra verticalmente */
+  gap: 20px;                /* espacio entre botones */
+  margin-top: 2rem;
+  text-align: center;
+  width: 100%;              /* que el contenedor ocupe todo el ancho */
+}
+
+.btn-guardar,
+.btn-cancelar {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+  min-width: 150px;         /* para que ambos botones se vean parejos */
+}
+
+/* Guardar */
+.btn-guardar {
+  background: #65dce0;
+  color: #fff;
+}
+
+.btn-guardar:hover {
+  background: #52b8bb;
+}
+
+/* Cancelar */
+.btn-cancelar {
+  background: #52b8bb;
+  color: #fff;
+}
+
+.btn-cancelar:hover {
+  background: #52b8bb;
+}
+
+
+
+
+.alert-success {
+    background-color: #4caf50; /* Verde */
+    color: white;
+    border-left: 6px solid #2e7d32; /* Barra lateral */
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: fadeIn 0.5s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Icono más grande */
+.alert-success i {
+    font-size: 1.5rem;
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

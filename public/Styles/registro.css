@@ -104,3 +104,27 @@ input{
 .register-text a:hover {
     text-decoration: underline;
 }
+select {
+    width: 100%;
+    padding: 1rem 1rem;
+    margin-bottom: 15px;
+    border: 1px solid #9a9797;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: white;
+    color: #333;
+    appearance: none; /* elimina estilo por defecto del navegador */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%239a9797'><path d='M4 6l4 4 4-4z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.2rem;
+}
+
+select:focus {
+    outline: none;
+    border-color: #65dce0;
+    box-shadow: 0 0 4px rgba(101, 220, 224, 0.5);
+}
