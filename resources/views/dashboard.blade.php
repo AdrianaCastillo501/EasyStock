@@ -53,7 +53,7 @@
         <a class="icon-button" href="#"><i class="fas fa-truck"></i> Operaciones</a>
         <a class="icon-button" href="#"><i class="fas fa-warehouse"></i> Inventario</a>
         <a class="icon-button" href="#"><i class="fas fa-user-plus"></i> Clientes</a>
-        <a class="icon-button" href="#"><i class="fas fa-box-open"></i> Proveedores</a>
+        <a class="icon-button" href="{{ url('/proveedores') }}"><i class="fas fa-box-open"></i> Proveedores</a>
         <a class="icon-button" href="#"><i class="fas fa-file-alt"></i> Reportes</a>
     </div>
   </div>

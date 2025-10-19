@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
-
+use App\Http\Controllers\ProveedorController;
 
 // Página principal
 Route::get('/', function () {
@@ -45,3 +45,7 @@ Route::delete('/usuarios/{id}', [DashboardController::class, 'eliminarUsuario'])
 // Edición de usuarios
 Route::get('/usuarios/editar/{id}', [DashboardController::class, 'editarUsuario'])->name('usuarios.editar');
 Route::put('/usuarios/editar/{id}', [DashboardController::class, 'actualizarUsuario'])->name('usuarios.actualizar');
+
+//Proveedores
+Route::get('/proveedores', [ProveedorController::class, 'index'])->name('proveedores.index');
+
