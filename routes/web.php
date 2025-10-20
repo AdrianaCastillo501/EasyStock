@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ClienteController;
 
 
 // Página principal
@@ -45,3 +46,24 @@ Route::delete('/usuarios/{id}', [DashboardController::class, 'eliminarUsuario'])
 // Edición de usuarios
 Route::get('/usuarios/editar/{id}', [DashboardController::class, 'editarUsuario'])->name('usuarios.editar');
 Route::put('/usuarios/editar/{id}', [DashboardController::class, 'actualizarUsuario'])->name('usuarios.actualizar');
+
+//Rutas para módulo de Clientes
+
+Route::get('/clientes', [ClienteController::class, 'index'])->name('clientes.index');
+
+// Registrar nuevo cliente
+Route::get('/clientes/registro', [ClienteController::class, 'registro'])->name('clientes.registro');
+Route::post('/clientes', [ClienteController::class, 'store'])->name('clientes.store');
+
+// Obtener datos JSON (para modal editar)
+Route::get('/clientes/{id_cliente}/data', [ClienteController::class, 'getCliente'])->name('clientes.data');
+
+// Actualizar cliente (desde modal)
+Route::put('/clientes/{id_cliente}', [ClienteController::class, 'update'])->name('clientes.update');
+
+// Ver detalles (modal "ver cliente")
+Route::post('/clientes/{id_cliente}/ver', [ClienteController::class, 'show'])->name('clientes.show');
+
+// Eliminar cliente
+Route::post('/clientes/{id_cliente}/eliminar', [ClienteController::class, 'destroy'])->name('clientes.eliminar');
+
