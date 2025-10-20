@@ -47,5 +47,25 @@ Route::get('/usuarios/editar/{id}', [DashboardController::class, 'editarUsuario'
 Route::put('/usuarios/editar/{id}', [DashboardController::class, 'actualizarUsuario'])->name('usuarios.actualizar');
 
 //Proveedores
+
+// Listado de proveedores
 Route::get('/proveedores', [ProveedorController::class, 'index'])->name('proveedores.index');
 
+// Formulario para crear un nuevo proveedor
+Route::get('/proveedores/crear', [ProveedorController::class, 'create'])->name('proveedores.create');
+
+// Guardar proveedor
+Route::post('/proveedores', [ProveedorController::class, 'store'])->name('proveedores.store');
+
+// Eliminar proveedor
+Route::delete('/proveedores/{id}', [App\Http\Controllers\ProveedorController::class, 'destroy'])
+    ->name('proveedores.destroy');
+
+    // Detalles del proveedor
+Route::get('/proveedores/{id_proveedor}/detalle', [App\Http\Controllers\ProveedorController::class, 'show'])->name('proveedores.show');
+
+// Mostrar datos del proveedor a editar
+Route::get('/proveedores/{id_proveedor}/editar', [ProveedorController::class, 'edit'])->name('proveedores.edit');
+
+// Actualizar proveedor
+Route::put('/proveedores/{id_proveedor}', [ProveedorController::class, 'update'])->name('proveedores.update');

@@ -11,7 +11,7 @@ class Proveedor extends Model
     use HasFactory;
 
     protected $table = 'PROVEEDORES'; // Nombre exacto de la tabla
-    protected $primaryKey = 'id'; // cambia si tu PK tiene otro nombre
+    protected $primaryKey = 'id_proveedor'; 
     public $timestamps = false; // si la tabla no tiene created_at/updated_at
 
     protected $fillable = [
@@ -19,7 +19,12 @@ class Proveedor extends Model
         'numero_identificacion',
         'nombre_contacto',
         'telefono_contacto',
-        'created_at' // si existe, sirve para calcular tiempo de relación
+        'email_contacto',
+        'direccion',    
+        'ciudad',
+        'tipo_proveedor',
+        'condiciones_pago',   
+        'fecha_creacion'
     ];
 
     // 🔹 Método para calcular tiempo de relación dinámicamente
