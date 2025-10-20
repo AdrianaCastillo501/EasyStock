@@ -1,0 +1,106 @@
+
+.registro{
+  color: #65dce0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  width: 90%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+
+h4 {
+  color: #65dce0;
+  font-size: 2rem;
+  text-align: left;
+}
+
+fieldset {
+  padding: 6px 12px;
+  margin-bottom: 20px;
+}
+
+legend {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    top: -10px;
+    left: 8px;
+    padding: 1rem 10px;
+}
+.fila {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 10px;
+}
+
+label {
+  text-align: left;
+  margin-bottom: 4px;
+  font-size: 14px;
+  color: #ffffff;
+  padding: 0.2rem 0; 
+}
+
+input, select {
+  width: 100%;
+  padding: 6px 10px;
+  margin-bottom: 10px; 
+  border: 1px solid #9a9797;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+ 
+.form-buttons {
+  display: flex;
+  justify-content: center; 
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; 
+  margin-top: 0.5rem;
+}
+
+.form-grupo {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px; /
+}
+
+
+.form-grupo label {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: white;
+  padding-left: 0;
+}
+
+.form-grupo input {
+  width: 100%;
+  max-width: 100%; 
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+}
+
+.form-grupo.corto {
+  flex: 1 1 20%; 
+  min-width: 180px; 
+}
+
+.form-grupo.mediano {
+  flex: 1 1 45%;
+}
+

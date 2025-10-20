@@ -30,8 +30,8 @@
   </div>
 
   <div class="main-content">
-    <a href="{{ route('dashboard.usuarios') }}">
-      <img class="contenedor-m" src="{{ asset('images/icono.png') }}" alt="Logo">
+    <a href="{{ route('dashboard') }}">
+            <img class="contenedor-m" src="{{ asset('image/icono.png') }}" alt="Logo">
     </a>
 
     <h1>Ferretería El Grillo</h1>
